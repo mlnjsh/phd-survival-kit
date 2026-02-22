@@ -1,0 +1,188 @@
+% =============================================================================
+% Journal Submission Cover Letter Template
+% PhD Survival Kit — Prof. Milan Amrut Joshi
+% =============================================================================
+%
+% USAGE:
+%   1. Replace all [PLACEHOLDERS] with your specific information
+%   2. Compile: pdflatex template.tex
+%   3. Attach as the cover letter when submitting your manuscript
+%
+% TIPS:
+%   - Keep the letter to one page (two pages maximum)
+%   - Be specific about your contribution, not generic
+%   - Mention why this journal is a good fit
+%   - If the journal has a specific cover letter format, follow it
+%
+% =============================================================================
+
+\documentclass[11pt, a4paper]{letter}
+
+% --- Packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}          % Space between paragraphs, no indent
+\usepackage{enumitem}          % Better list control
+
+% --- Hyperlink styling ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    urlcolor=blue!60!black,
+}
+
+% --- Custom colors ---
+\definecolor{DarkBlue}{RGB}{25, 55, 109}
+
+% =============================================================================
+% LETTER CONTENT
+% =============================================================================
+
+\begin{document}
+
+% --- Sender Information ---
+\begin{flushright}
+    \textbf{[Your Full Name], [Degree]}\\
+    [Your Position/Title]\\
+    [Department Name]\\
+    [University/Institution Name]\\
+    [Street Address]\\
+    [City, State, ZIP Code]\\
+    [Country]\\[0.5em]
+    Email: \href{mailto:your.email@university.edu}{your.email@university.edu}\\
+    Phone: [+1-XXX-XXX-XXXX]\\
+    ORCID: [0000-0000-0000-0000]\\[0.5em]
+    \today
+\end{flushright}
+
+\vspace{1em}
+
+% --- Recipient Information ---
+\noindent
+\textbf{[Editor's Full Name, Degree]}\\
+Editor-in-Chief\\
+\textit{[Journal Full Name]}\\
+[Publisher Name]
+
+\vspace{1em}
+
+% --- Salutation ---
+\noindent Dear [Prof./Dr.] [Editor's Last Name],
+
+\vspace{0.5em}
+
+% --- Opening: Manuscript submission statement ---
+We are pleased to submit our manuscript entitled \textbf{``[Full Title of
+Your Manuscript]''} for consideration for publication in \textit{[Journal
+Name]}. This manuscript is [an original research article / a review
+article / a short communication] and has not been published previously,
+nor is it under consideration for publication elsewhere.
+
+% --- Why this journal? ---
+We believe that \textit{[Journal Name]} is the ideal venue for this work
+because [explain the fit: the journal's scope, readership, recent
+publications on related topics]. Our work directly relates to recent
+articles published in your journal, including [cite 1--2 relevant papers
+from the journal if appropriate].
+
+% --- Summary of the work ---
+\textbf{Summary of Contributions.}
+In this paper, we address the problem of [concise problem statement].
+Despite significant progress in [area], existing methods suffer from
+[key limitation]. Our work makes the following contributions:
+
+\begin{enumerate}[leftmargin=2em, itemsep=0.3em]
+    \item \textbf{[Contribution 1]:} We propose [method/framework/model]
+          that [key advantage]. This is the first approach to [novelty
+          claim].
+
+    \item \textbf{[Contribution 2]:} We introduce [specific technical
+          innovation], which enables [practical benefit] and addresses
+          [limitation of prior work].
+
+    \item \textbf{[Contribution 3]:} We conduct comprehensive experiments
+          on [number] benchmark datasets, demonstrating [quantitative
+          improvement, e.g., ``a 3.7\% improvement in accuracy''] over
+          state-of-the-art methods.
+\end{enumerate}
+
+% --- Significance and impact ---
+\textbf{Significance.}
+Our findings are significant because [explain broader impact]. This work
+has potential applications in [application domain 1] and [application
+domain 2], and opens new research directions in [emerging area].
+
+% --- Statement of originality and ethics ---
+\textbf{Originality and Ethics Statement.}
+We confirm that:
+\begin{itemize}[leftmargin=2em, itemsep=0.2em]
+    \item This manuscript is original and has not been published elsewhere.
+    \item The manuscript is not currently under review at any other journal
+          or conference.
+    \item All authors have read and approved the final manuscript.
+    \item All authors have agreed to its submission to \textit{[Journal Name]}.
+    \item There are no conflicts of interest to declare.
+    \item [If applicable:] This research was approved by [IRB/Ethics
+          Committee Name], protocol number [XXX].
+    \item [If applicable:] Data and code are publicly available at
+          \url{https://github.com/username/repo}.
+\end{itemize}
+
+% --- Author contributions (required by many journals) ---
+\textbf{Author Contributions.}
+[First Author] conceived the idea, designed the methodology, conducted
+the experiments, and wrote the manuscript. [Second Author] contributed
+to the theoretical analysis and reviewed the manuscript. [Third Author]
+supervised the research and provided critical revisions.
+
+% --- Suggested reviewers ---
+\textbf{Suggested Reviewers.}
+We respectfully suggest the following experts as potential reviewers:
+
+\begin{enumerate}[leftmargin=2em, itemsep=0.3em]
+    \item \textbf{Prof. [Full Name]}, [Department], [University],
+          [Country].\\
+          Email: \href{mailto:reviewer1@university.edu}{reviewer1@university.edu}\\
+          \textit{Expertise: [relevant area]. Recent work on [topic].}
+
+    \item \textbf{Dr. [Full Name]}, [Department], [University],
+          [Country].\\
+          Email: \href{mailto:reviewer2@university.edu}{reviewer2@university.edu}\\
+          \textit{Expertise: [relevant area]. Published extensively on [topic].}
+
+    \item \textbf{Prof. [Full Name]}, [Department], [University],
+          [Country].\\
+          Email: \href{mailto:reviewer3@university.edu}{reviewer3@university.edu}\\
+          \textit{Expertise: [relevant area]. Active in [community/group].}
+\end{enumerate}
+
+% --- Opposed reviewers (optional) ---
+% Uncomment if you wish to list opposed reviewers (with justification):
+% \textbf{Opposed Reviewers.}
+% We respectfully request that [Name] not serve as a reviewer due to
+% [competing interests / recent collaboration / known disagreement on
+% fundamental methodology].
+
+% --- Closing ---
+\vspace{0.5em}
+We sincerely hope that you will find this manuscript suitable for
+publication in \textit{[Journal Name]}. We look forward to your
+response and are happy to address any questions or provide additional
+information.
+
+\vspace{1em}
+
+% --- Signature ---
+\noindent
+Sincerely,
+
+\vspace{2em}
+
+\noindent
+\textbf{[Your Full Name]}\\
+[Your Title/Position]\\
+Corresponding Author\\
+On behalf of all co-authors
+
+\end{document}
