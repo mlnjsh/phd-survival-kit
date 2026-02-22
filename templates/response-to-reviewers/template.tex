@@ -1,0 +1,445 @@
+% =============================================================================
+% Response to Reviewers Template
+% PhD Survival Kit — Prof. Milan Amrut Joshi
+% =============================================================================
+%
+% USAGE:
+%   1. Paste each reviewer comment into the \ReviewerComment{} blocks
+%   2. Write your response in the \Response{} blocks
+%   3. Describe manuscript changes in the \Change{} blocks
+%   4. Compile: pdflatex template.tex
+%
+% COLOR CODING:
+%   - Reviewer comments: BLUE
+%   - Your responses: BLACK
+%   - Changes made to manuscript: RED
+%   - Editor comments: DARK PURPLE
+%
+% TIPS:
+%   - Be thorough but concise
+%   - Thank every reviewer, even for harsh criticism
+%   - Quote specific page/line/section numbers for changes
+%   - Never be defensive; be professional and grateful
+%   - Address EVERY point, even if you respectfully disagree
+%
+% =============================================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}          % Paragraph spacing
+\usepackage{titlesec}         % Section formatting
+\usepackage{fancyhdr}         % Header/footer
+\usepackage{lipsum}           % Placeholder text (remove in final version)
+
+% =============================================================================
+% COLOR DEFINITIONS
+% =============================================================================
+\definecolor{ReviewerBlue}{RGB}{0, 70, 150}
+\definecolor{ResponseBlack}{RGB}{0, 0, 0}
+\definecolor{ChangeRed}{RGB}{180, 30, 30}
+\definecolor{EditorPurple}{RGB}{100, 30, 130}
+\definecolor{LightGray}{RGB}{245, 245, 245}
+\definecolor{AcceptGreen}{RGB}{30, 130, 60}
+
+% =============================================================================
+% CUSTOM COMMANDS
+% =============================================================================
+
+% --- Reviewer Comment (blue, italic, indented) ---
+\newcommand{\ReviewerComment}[1]{%
+    \vspace{0.5em}
+    \noindent
+    \begin{quote}
+        \textcolor{ReviewerBlue}{\textit{#1}}
+    \end{quote}
+}
+
+% --- Editor Comment (purple, italic) ---
+\newcommand{\EditorComment}[1]{%
+    \vspace{0.5em}
+    \noindent
+    \begin{quote}
+        \textcolor{EditorPurple}{\textit{#1}}
+    \end{quote}
+}
+
+% --- Response (black, normal) ---
+\newcommand{\Response}[1]{%
+    \vspace{0.3em}
+    \noindent
+    \textbf{Response:} #1
+}
+
+% --- Changes made to manuscript (red) ---
+\newcommand{\Change}[1]{%
+    \vspace{0.3em}
+    \noindent
+    \textcolor{ChangeRed}{\textbf{Changes made:} #1}
+}
+
+% --- Shorthand for point numbering ---
+\newcounter{reviewerpoint}
+\newcommand{\ReviewerPoint}[1]{%
+    \stepcounter{reviewerpoint}
+    \vspace{1em}
+    \noindent
+    \textbf{Point \arabic{reviewerpoint}:}
+    \ReviewerComment{#1}
+}
+
+% --- Reset counter for each reviewer ---
+\newcommand{\ResetPoints}{\setcounter{reviewerpoint}{0}}
+
+% =============================================================================
+% HEADER/FOOTER
+% =============================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Response to Reviewers}
+\rhead{\small [Manuscript ID: XXXX-XXXX]}
+\cfoot{\small Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% =============================================================================
+% SECTION FORMATTING
+% =============================================================================
+\titleformat{\section}
+    {\Large\bfseries\color{ReviewerBlue}}
+    {\thesection}{1em}{}[\vspace{0.3em}\hrule]
+
+\titleformat{\subsection}
+    {\large\bfseries}
+    {\thesubsection}{1em}{}
+
+% =============================================================================
+% DOCUMENT
+% =============================================================================
+\begin{document}
+
+% --- Title Block ---
+\begin{center}
+    {\LARGE\bfseries Response to Reviewers}
+
+    \vspace{1em}
+
+    {\large Manuscript: \textbf{``[Your Paper Title]''}}
+
+    \vspace{0.5em}
+
+    {\normalsize Manuscript ID: [XXXX-XXXX]}
+
+    \vspace{0.5em}
+
+    {\normalsize Submitted to: \textit{[Journal Name]}}
+
+    \vspace{0.5em}
+
+    {\normalsize Authors: [Author 1, Author 2, Author 3]}
+
+    \vspace{0.5em}
+
+    {\normalsize Date: \today}
+\end{center}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+% =============================================================================
+% GENERAL RESPONSE TO EDITOR
+% =============================================================================
+\noindent Dear Editor,
+
+\vspace{0.5em}
+
+We sincerely thank you and the reviewers for the thorough and
+constructive evaluation of our manuscript. The comments have been
+invaluable in improving the quality and clarity of our work.
+
+We have carefully addressed every comment and suggestion. Below, we
+provide a detailed point-by-point response. For convenience:
+\begin{itemize}[leftmargin=2em]
+    \item \textcolor{ReviewerBlue}{\textit{Reviewer comments are shown
+          in blue italics}}
+    \item \textbf{Our responses are in black bold}
+    \item \textcolor{ChangeRed}{\textbf{Changes to the manuscript are
+          described in red}}
+\end{itemize}
+
+All changes in the revised manuscript are highlighted in
+\textcolor{ChangeRed}{red} for easy identification.
+
+\vspace{1em}
+
+% =============================================================================
+% RESPONSE TO EDITOR
+% =============================================================================
+\section*{Response to Editor}
+
+\EditorComment{%
+    The reviewers have raised several concerns that need to be addressed
+    before the manuscript can be considered for publication. Please pay
+    particular attention to the experimental evaluation and the clarity
+    of the methodology section.
+}
+
+\Response{%
+    We thank the editor for summarizing the key areas for improvement.
+    We have substantially revised the experimental section (now
+    Section~5) with additional baselines and datasets, and rewritten
+    the methodology section (Section~3) for improved clarity. A
+    detailed accounting of all changes follows below.
+}
+
+\vspace{2em}
+
+% =============================================================================
+% REVIEWER 1
+% =============================================================================
+\section*{Response to Reviewer 1}
+\ResetPoints
+
+\noindent We thank Reviewer 1 for the careful reading and insightful
+comments. We address each point below.
+
+% --- Example: Accepting a suggestion and making changes ---
+\ReviewerPoint{%
+    The motivation for using topological features is not sufficiently
+    clear. Why should topological features be preferred over standard
+    deep learning features? The authors should provide a more
+    compelling justification.
+}
+
+\Response{%
+    We thank the reviewer for this important observation. We agree that
+    the motivation needed strengthening. Topological features capture
+    global structural properties (such as connected components, loops,
+    and voids) that are invariant to continuous deformations --- a
+    property that standard convolutional or fully-connected features
+    do not inherently possess. We have expanded the Introduction
+    (Section~1, paragraphs 2--3) with a concrete example demonstrating
+    how topological features capture information missed by standard
+    feature extractors, supported by a new illustrative figure
+    (Fig.~2).
+}
+
+\Change{%
+    Revised Section~1, paragraphs 2--3 (page 2). Added new Fig.~2
+    showing a comparison of feature representations. Added references
+    [X, Y, Z] to support the motivation.
+}
+
+% --- Example: Partially accepting a suggestion ---
+\ReviewerPoint{%
+    The experimental evaluation is limited. The authors only test on
+    two datasets. I recommend adding experiments on at least two more
+    datasets, including a large-scale benchmark such as ImageNet.
+}
+
+\Response{%
+    We appreciate this suggestion and agree that broader evaluation
+    strengthens the paper. We have added experiments on two additional
+    datasets: \textbf{CIFAR-100} and \textbf{Tiny-ImageNet} (a
+    manageable subset of ImageNet with 200 classes).
+
+    Regarding full ImageNet: We respectfully note that our method
+    involves computing persistent homology, which has $O(n^3)$
+    complexity in the number of simplices. Running this on
+    full-resolution ImageNet (1.2M images) would require computational
+    resources beyond our current capacity. However, the Tiny-ImageNet
+    results (Table~3) demonstrate scalability to a meaningful scale.
+    We have added a discussion of computational constraints and
+    scalability in Section~5.4.
+}
+
+\Change{%
+    Added Section~5.2 with CIFAR-100 results (Table~2).
+    Added Section~5.3 with Tiny-ImageNet results (Table~3).
+    Added Section~5.4 discussing computational complexity and
+    scalability.
+}
+
+% --- Example: Respectfully disagreeing ---
+\ReviewerPoint{%
+    The comparison with Method X [Reference 15] is unfair because the
+    authors use different preprocessing for their method versus the
+    baseline. Both should use identical preprocessing pipelines.
+}
+
+\Response{%
+    We appreciate the reviewer raising this concern about fair
+    comparison. However, we respectfully clarify that the preprocessing
+    steps \textit{are} identical for all methods. Specifically, all
+    methods receive the same normalized input images (zero-mean,
+    unit-variance, resized to $224 \times 224$). The topological
+    feature extraction in our method occurs \textit{after} this shared
+    preprocessing step, as an additional feature computation module
+    (see Fig.~1, Step~2). This is analogous to how different methods
+    may compute different internal representations from the same
+    preprocessed input.
+
+    To make this clearer, we have added an explicit statement in
+    Section~4.2 confirming that all methods share identical
+    preprocessing, and we have added a preprocessing column to
+    Table~1.
+}
+
+\Change{%
+    Clarified preprocessing in Section~4.2 (page 7, paragraph 1).
+    Added ``Preprocessing'' column to Table~1 showing identical
+    settings for all methods.
+}
+
+% --- Example: Accepting a minor comment ---
+\ReviewerPoint{%
+    There are several typographical errors throughout the paper.
+    For example, ``topoligical'' on page 3, and inconsistent
+    capitalization of ``Persistent Homology'' versus ``persistent
+    homology.''
+}
+
+\Response{%
+    We thank the reviewer for catching these errors. We have
+    carefully proofread the entire manuscript and corrected all
+    typographical errors. We now consistently use lowercase
+    ``persistent homology'' throughout, except at the beginning of
+    sentences.
+}
+
+\Change{%
+    Corrected all typographical errors throughout the manuscript.
+    Standardized terminology and capitalization.
+}
+
+\vspace{2em}
+
+% =============================================================================
+% REVIEWER 2
+% =============================================================================
+\section*{Response to Reviewer 2}
+\ResetPoints
+
+\noindent We thank Reviewer 2 for the constructive feedback and
+thoughtful suggestions. We address each point below.
+
+% --- Example response ---
+\ReviewerPoint{%
+    The paper lacks a proper ablation study. It is unclear which
+    components of the proposed method contribute most to the
+    performance gains. I strongly recommend adding an ablation
+    experiment.
+}
+
+\Response{%
+    We completely agree with this suggestion. We have added a
+    comprehensive ablation study (Section~5.5, Table~4) that
+    systematically evaluates the contribution of each component:
+    %
+    \begin{enumerate}[label=(\alph*), leftmargin=2em]
+        \item Full model: 94.3\% accuracy
+        \item Without topological features: 92.1\% ($-$2.2\%)
+        \item Without regularization: 93.5\% ($-$0.8\%)
+        \item Without data augmentation: 93.0\% ($-$1.3\%)
+    \end{enumerate}
+    %
+    The results confirm that topological features provide the largest
+    individual contribution. We have also added a discussion
+    interpreting these findings.
+}
+
+\Change{%
+    Added new Section~5.5 ``Ablation Study'' with Table~4 (page 9).
+    Added discussion of ablation findings (page 9, paragraphs 2--3).
+}
+
+\ReviewerPoint{%
+    The related work section does not discuss [Important Paper by
+    Author et al., 2023], which is highly relevant to this work.
+}
+
+\Response{%
+    We thank the reviewer for pointing us to this important reference.
+    We have added a discussion of [Author et al., 2023] in Section~2.2
+    and explain how our approach differs: while [Author et al.] focus
+    on [their approach], our method addresses [different aspect] by
+    [key difference].
+}
+
+\Change{%
+    Added discussion of [Author et al., 2023] in Section~2.2
+    (page 4, paragraph 3). Added citation [XX] to the bibliography.
+}
+
+\ReviewerPoint{%
+    The writing quality needs improvement. Several sentences are
+    overly long and difficult to follow, particularly in Section 3.
+}
+
+\Response{%
+    We have thoroughly revised Section~3 for clarity, breaking long
+    sentences into shorter ones, adding transitional phrases, and
+    restructuring paragraphs for better flow. We have also had the
+    revised manuscript proofread by a native English speaker.
+}
+
+\Change{%
+    Substantially revised Section~3 for improved readability.
+    Revised writing throughout the manuscript.
+}
+
+\vspace{2em}
+
+% =============================================================================
+% REVIEWER 3 (if applicable, copy the structure above)
+% =============================================================================
+% \section*{Response to Reviewer 3}
+% \ResetPoints
+% ...
+
+% =============================================================================
+% SUMMARY OF CHANGES
+% =============================================================================
+\section*{Summary of All Changes}
+
+For convenience, we list all major changes to the revised manuscript:
+
+\begin{enumerate}[leftmargin=2em, itemsep=0.4em]
+    \item \textcolor{ChangeRed}{Expanded motivation in Section~1 with
+          new illustrative example (Fig.~2)}
+    \item \textcolor{ChangeRed}{Added discussion of [Author et al.,
+          2023] to Section~2.2}
+    \item \textcolor{ChangeRed}{Substantially revised Section~3 for
+          clarity and readability}
+    \item \textcolor{ChangeRed}{Clarified preprocessing details in
+          Section~4.2}
+    \item \textcolor{ChangeRed}{Added experiments on CIFAR-100
+          (Section~5.2, Table~2) and Tiny-ImageNet (Section~5.3,
+          Table~3)}
+    \item \textcolor{ChangeRed}{Added computational analysis in
+          Section~5.4}
+    \item \textcolor{ChangeRed}{Added ablation study in Section~5.5,
+          Table~4}
+    \item \textcolor{ChangeRed}{Corrected all typographical errors and
+          standardized terminology}
+    \item \textcolor{ChangeRed}{Added [N] new references to the
+          bibliography}
+\end{enumerate}
+
+\vspace{2em}
+
+\noindent We hope that the revised manuscript addresses all concerns
+satisfactorily. We are grateful for the opportunity to improve our
+work and welcome any further suggestions.
+
+\vspace{1em}
+
+\noindent Sincerely,\\
+\textbf{[Corresponding Author Name]}\\
+On behalf of all co-authors
+
+\end{document}
