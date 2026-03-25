@@ -1625,3 +1625,34 @@ In simple terms: use it, share it, modify it, teach with it. Just give credit wh
 <p align="center">
   <sub>Last updated: February 2026</sub>
 </p>
+
+
+---
+
+## Contributors & Domain Experts
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/mlnjsh">
+        <img src="https://github.com/mlnjsh.png" width="80px;" alt="Milan Amrut Joshi"/><br />
+        <sub><b>Milan Amrut Joshi</b></sub>
+      </a><br />
+      <sub>Project Author</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/manubot">
+        <img src="https://github.com/manubot.png" width="80px;" alt="Manubot"/><br />
+        <sub><b>Manubot</b></sub>
+      </a><br />
+      <sub>Scholarly manuscript automation</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jbkunst">
+        <img src="https://github.com/jbkunst.png" width="80px;" alt="Joshua Kunst"/><br />
+        <sub><b>Joshua Kunst</b></sub>
+      </a><br />
+      <sub>Data viz & academic writing</sub>
+    </td>
+  </tr>
+</table>
